@@ -19,4 +19,4 @@ RUN pip install -r requirements.txt
 
 COPY text.py .
 
-ENTRYPOINT ["python", "text.py"]
+ENTRYPOINT ["python", "/twilio/text.py"]
