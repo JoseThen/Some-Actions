@@ -9,7 +9,7 @@ client = Client(account_sid, auth_token)
 
 message = client.messages \
     .create(
-         body='Your BLANK Repository has an Open PR',
+         body="GitHub Repo: {}\nMessage: A New PR has been Created by {}".format(os.environ['GITHUB_REPOSITORY'], os.environ['GITHUB_ACTOR']),
          from_='+{}'.format(os.environ['FROM']),
          to='+{}'.format(os.environ['TO'])
      )
